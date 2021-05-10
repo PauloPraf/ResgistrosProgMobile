@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul1"
-    tools:context=".MainActivity">
+    tools:context=".UI.MainActivity">
 
 
     <TextView
@@ -60,12 +60,12 @@
         android:text="Cursos"
         app:backgroundTint="@color/azul2"
         app:cornerRadius="27sp"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/btt_alunos"
+        app:layout_constraintStart_toStartOf="@+id/btt_alunos"
         app:layout_constraintTop_toTopOf="@+id/txt_ger_cursos" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btt_alunos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="48dp"
