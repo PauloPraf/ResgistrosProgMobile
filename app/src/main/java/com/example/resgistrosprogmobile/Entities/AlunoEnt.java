@@ -1,9 +1,11 @@
 package com.example.resgistrosprogmobile.Entities;
 
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(foreignKeys = @ForeignKey(entity = CursoEnt.class,
+        parentColumns = "Cursoid", childColumns = "Cursoid"))
 public class AlunoEnt {
     @PrimaryKey(autoGenerate = true)
     private int Alunoid;
@@ -13,4 +15,65 @@ public class AlunoEnt {
     private String email;
     private String telefone;
 
+    public AlunoEnt(int Alunoid, int Cursoid, String nomeAluno, String cpf, String email, String telefone) {
+        this.Alunoid = Alunoid;
+        this.Cursoid = Cursoid;
+        this.nomeAluno = nomeAluno;
+        this.cpf = cpf;
+        this.email = email;
+        this.telefone = telefone;
+    }
+
+    public int getAlunoid() {
+        return Alunoid;
+    }
+
+    public void setAlunoid(int alunoid) {
+        Alunoid = alunoid;
+    }
+
+    public int getCursoid() {
+        return Cursoid;
+    }
+
+    public void setCursoid(int cursoid) {
+        Cursoid = cursoid;
+    }
+
+    public String getNomeAluno() {
+        return nomeAluno;
+    }
+
+    public void setNomeAluno(String nomeAluno) {
+        this.nomeAluno = nomeAluno;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    @Override
+    public String toString() {
+        return "#" + getAlunoid() + " " + getNomeAluno();
+    }
 }
