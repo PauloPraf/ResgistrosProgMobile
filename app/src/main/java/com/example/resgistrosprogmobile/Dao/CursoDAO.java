@@ -22,8 +22,11 @@ public interface CursoDAO {
     @Insert
     void insertAll(CursoEnt... cursoEnt);
 
-    @Update
-    void update(CursoEnt cursos);
+    @Query("UPDATE CursoEnt SET nomeCurso =:name WHERE Cursoid == :Cursoid")
+    void updateName(String name, int Cursoid);
+
+    @Query("UPDATE CursoEnt SET qtdeHoras =:qtdeHoras WHERE Cursoid == :Cursoid")
+    void updateCarga(int qtdeHoras, int Cursoid);
 
     @Delete
     void delete(CursoEnt cursos);

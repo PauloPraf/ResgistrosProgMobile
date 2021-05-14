@@ -1,8 +1,12 @@
 package com.example.resgistrosprogmobile.Entities;
 
+import android.content.Context;
+
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
+
+import com.example.resgistrosprogmobile.Database.TrabDatabase;
 
 @Entity(foreignKeys = @ForeignKey(entity = CursoEnt.class,
         parentColumns = "Cursoid", childColumns = "Cursoid"))
@@ -15,8 +19,7 @@ public class AlunoEnt {
     private String email;
     private String telefone;
 
-    public AlunoEnt(int Alunoid, int Cursoid, String nomeAluno, String cpf, String email, String telefone) {
-        this.Alunoid = Alunoid;
+    public AlunoEnt(int Cursoid, String nomeAluno, String cpf, String email, String telefone) {
         this.Cursoid = Cursoid;
         this.nomeAluno = nomeAluno;
         this.cpf = cpf;
@@ -74,6 +77,6 @@ public class AlunoEnt {
 
     @Override
     public String toString() {
-        return "#" + getAlunoid() + " " + getNomeAluno();
+        return "#" + getAlunoid() + " - " + getNomeAluno() + " - " + getCursoid();
     }
 }

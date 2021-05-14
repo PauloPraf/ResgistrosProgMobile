@@ -3,6 +3,8 @@ package com.example.resgistrosprogmobile.Entities;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.resgistrosprogmobile.Database.TrabDatabase;
+
 @Entity
 public class CursoEnt {
     @PrimaryKey(autoGenerate = true)
@@ -10,8 +12,7 @@ public class CursoEnt {
     private String nomeCurso;
     private int qtdeHoras;
 
-    public CursoEnt(int Cursoid, String nomeCurso, int qtdeHoras) {
-        this.Cursoid = Cursoid;
+    public CursoEnt(String nomeCurso, int qtdeHoras) {
         this.nomeCurso = nomeCurso;
         this.qtdeHoras = qtdeHoras;
     }
@@ -42,6 +43,6 @@ public class CursoEnt {
 
     @Override
     public String toString() {
-        return "#" + getCursoid() + " " + getNomeCurso();
+        return "#" + getCursoid() + " - " + getNomeCurso() + " - " + getQtdeHoras() + " horas";
     }
 }
