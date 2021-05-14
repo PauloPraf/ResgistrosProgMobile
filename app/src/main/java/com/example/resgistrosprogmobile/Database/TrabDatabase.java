@@ -13,7 +13,7 @@ import com.example.resgistrosprogmobile.Entities.CursoEnt;
 @Database(entities = {AlunoEnt.class, CursoEnt.class},version = 1)
 public abstract class TrabDatabase extends RoomDatabase {
 
-    private static TrabDatabase INSTANCE;
+    public static TrabDatabase INSTANCE;
 
     public static TrabDatabase getDatabase(Context context) {
         if(INSTANCE == null) {

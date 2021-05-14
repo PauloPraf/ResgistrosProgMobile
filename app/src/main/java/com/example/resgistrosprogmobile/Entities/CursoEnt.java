@@ -43,6 +43,8 @@ public class CursoEnt {
 
     @Override
     public String toString() {
-        return "#" + getCursoid() + " - " + getNomeCurso() + " - " + getQtdeHoras() + " horas";
+        TrabDatabase db = TrabDatabase.INSTANCE;
+        int alunos = db.cursoModel().qntAlunos(getCursoid());
+        return "#" + getCursoid() + " - " + getNomeCurso() + " - " + getQtdeHoras() + " horas - " + alunos + " alunos matriculados";
     }
 }

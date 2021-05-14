@@ -28,6 +28,9 @@ public interface CursoDAO {
     @Query("UPDATE CursoEnt SET qtdeHoras =:qtdeHoras WHERE Cursoid == :Cursoid")
     void updateCarga(int qtdeHoras, int Cursoid);
 
+    @Query("SELECT count(1) FROM CursoEnt JOIN AlunoEnt ON (AlunoEnt.Cursoid =:cursoid)")
+    int qntAlunos(int cursoid);
+
     @Delete
     void delete(CursoEnt cursos);
 }

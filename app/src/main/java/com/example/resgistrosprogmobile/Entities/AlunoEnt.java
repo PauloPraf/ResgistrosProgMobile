@@ -77,6 +77,8 @@ public class AlunoEnt {
 
     @Override
     public String toString() {
-        return "#" + getAlunoid() + " - " + getNomeAluno() + " - " + getCursoid();
+        TrabDatabase db = TrabDatabase.INSTANCE;
+        CursoEnt curso = db.cursoModel().get(getCursoid());
+        return "#" + getAlunoid() + " - " + getNomeAluno() + " - " + curso.getNomeCurso();
     }
 }
