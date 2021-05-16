@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/azul1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UI.AlunoForm">
@@ -10,10 +11,13 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ubuntu_light"
         android:text="Formulário de aluno"
+        android:textColor="@color/azul5"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,8 +29,12 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="4dp"
         android:ems="10"
+        android:fontFamily="@font/ubuntu_light"
         android:hint="Nome"
         android:inputType="textPersonName"
+        android:textAllCaps="false"
+        android:textColor="@color/azul5"
+        android:textColorHint="@color/azul5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -39,6 +47,9 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="CPF"
+        android:fontFamily="@font/ubuntu_light"
+        android:textColor="@color/azul5"
+        android:textColorHint="@color/azul5"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtNomeAluno" />
@@ -53,6 +64,9 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
+        android:fontFamily="@font/ubuntu_light"
+        android:textColor="@color/azul5"
+        android:textColorHint="@color/azul5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtCpf" />
 
@@ -65,6 +79,9 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Telefone"
+        android:fontFamily="@font/ubuntu_light"
+        android:textColor="@color/azul5"
+        android:textColorHint="@color/azul5"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
@@ -80,6 +97,10 @@
         android:layout_marginRight="44dp"
         android:layout_marginBottom="343dp"
         android:text="Criar"
+        app:backgroundTint="@color/azul2"
+        app:cornerRadius="27sp"
+        android:fontFamily="@font/ubuntu_light"
+        android:textColor="@color/azul5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDeletar"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,8 +116,11 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:layout_marginBottom="343dp"
+        android:fontFamily="@font/ubuntu_light"
         android:text="Apagar"
-        app:backgroundTint="#BF2222"
+        android:textColor="@color/azul5"
+        app:backgroundTint="@color/teal_700"
+        app:cornerRadius="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCriar"
@@ -109,6 +133,8 @@
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:textColor="@color/azul5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCriarCursoAluno" />
 
@@ -120,6 +146,8 @@
         android:layout_marginLeft="112dp"
         android:layout_marginTop="12dp"
         android:text="Criar novo curso"
+        android:fontFamily="@font/ubuntu_light"
+        android:textColor="@color/azul5"
         app:backgroundTint="#425F96"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtTel" />
